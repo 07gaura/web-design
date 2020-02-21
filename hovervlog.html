@@ -1,0 +1,126 @@
+<html>
+<head><title></title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+    }
+
+    .middle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .btn{
+        position: relative;
+        display: block;
+        border: 3px solid rgb(0, 225, 255);
+        padding: 14px 60px;
+        margin: 15px;
+        text-decoration: none;
+        color: rgb(0, 225, 255);
+        overflow: hidden;
+
+    }
+
+    .btn::before{
+        background-color: rgb(0, 225, 255);
+        content: "";
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+        transition: 0.6s;
+    }
+
+    .btn::after{
+        background-color: rgb(0, 225, 255);
+        content: "";
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+        transition: 0.6s;
+    }
+
+    .btn1::before{
+        width:100%;
+        height: 0%;
+    }
+
+    .btn1:hover::before{
+        width:0%;
+        height: 100%;
+        background-color: rgb(0, 225, 255);
+    }
+
+    .btn2::before{
+        width:0%;
+        height: 10%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        transition: 1.5s ;
+    }
+
+    .btn2:hover:before{
+        width:400%;
+        height: 0%;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    .btn2::after{
+        width:0%;
+        height: 10%;
+        transform: translate(-50%, -50%) rotate(360deg);
+        transition: 1.5s ;
+    }
+
+    .btn2:hover:after{
+        width:400%;
+        height: 0%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        transition: 1.5s ;
+    }
+
+    .btn3::before{
+        width:0%;
+        height: 15%;
+        transform: translate(-50%, -50%) rotate(12deg);
+        transition: 0.6s;
+    }
+
+    .btn3:hover::before{
+        width: 150%;
+        height: 0%;
+        transform: translate(-50%, -50%) rotate(12deg);
+    }
+
+    .btn3::after{
+        width: 0%;
+        height: 15%;
+        transform: translate(-50%, -50%) rotate(-12deg);
+        transition: 0.6s;
+    }
+    
+    .btn3:hover::after{
+        width: 150%;
+        height: 0%;
+        transform: translate(-50%, -50%) rotate(-12deg);
+    }
+</style>
+<body>
+        <div class="middle">
+            <a href="#" class="btn btn1">Hover</a>
+            <a href="#" class="btn btn2">Hover</a>
+            <a href="#" class="btn btn3">Hover</a>
+        </div>
+
+</body>
+</html>
